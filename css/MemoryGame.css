@@ -215,13 +215,25 @@ body {
   -ms-transform: rotateY(0deg);
   -o-transform: rotateY(0deg);
   transform: rotateY(0deg);
-  background-color: #e12d00;
+  /*background-color: #e12d00;*/
+  background: linear-gradient(120deg, #FF8626, #E12E00);
+
   border-radius: 5%;
-  background-image: url(../images/card.svg);
+  /*background-image: url(../images/card.svg);*/
   background-position:50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
+  text-decoration: none;
+}
 
+.front p {
+  color: white;
+  font-size: 10vh;
+  font-family: "Arial";
+  text-align: center;
+  margin: 0;
+  height: 100%;
+  padding: 8%;
 }
 
 /* back, initially hidden pane */
