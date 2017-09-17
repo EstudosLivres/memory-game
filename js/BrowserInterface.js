@@ -166,7 +166,8 @@
         back.classList.add("card-" + value);
         back.setAttribute("href", "#");
 
-        front.innerHTML = "<p>"+index+"</p>";
+        var cardId = parseInt(index)+1;
+        front.innerHTML = "<p>"+ cardId +"</p>";
         flipper.appendChild(front);
         flipper.appendChild(back);
         flipContainer.appendChild(flipper);
