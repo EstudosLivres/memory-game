@@ -1,7 +1,10 @@
 /**
- * Author: Maximo Mena
+* Author: Maximo Mena
  * GitHub: mmenavas
  * Twitter: @menamaximo
+ * Author-Update: Ilton Garcia
+ * GitHub: TonGarcia
+ *
  * Project: Memory Workout
  * Description: The game interface
  */
