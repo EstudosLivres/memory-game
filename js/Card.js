@@ -18,7 +18,7 @@ MemoryGame.Card = function(value) {
 
   this.reveal = function() {
     this.isRevealed = true;
-  }
+  };
 
   this.conceal = function() {
     this.isRevealed = false;

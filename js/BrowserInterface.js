@@ -49,18 +49,18 @@
         var status = $.play(this.index);
         console.log(status);
 
-        if (status.code != 0) {
+        if (status.code !== 0) {
             this.classList.toggle('clicked');
         }
 
-        if (status.code == 3) {
+        if (status.code === 3) {
             setTimeout(function () {
                 var childNodes = document.getElementById('memory--cards').childNodes;
                 childNodes[status.args[0]].classList.remove('clicked');
                 childNodes[status.args[1]].classList.remove('clicked');
             }.bind(status), 500);
         }
-        else if (status.code == 4) {
+        else if (status.code === 4) {
             var score = parseInt((($.attempts - $.mistakes) / $.attempts) * 100, 10);
             var message = getEndGameMessage(score);
 
@@ -76,7 +76,7 @@
     var getEndGameMessage = function (score) {
         var message = "";
 
-        if (score == 100) {
+        if (score === 100) {
             message = "Amazing job!"
         }
         else if (score >= 70) {
@@ -90,7 +90,7 @@
         }
 
         return message;
-    }
+    };
 
     // Build grid of cards
     var buildLayout = function (cards, rows, columns) {
@@ -163,6 +163,7 @@
         front.classList.add("front");
         front.setAttribute("href", "#");
         back.classList.add("back");
+        // if(value === undefined) alert(value);
         back.classList.add("card-" + value);
         back.setAttribute("href", "#");
 
@@ -177,6 +178,6 @@
         return flipContainer;
     };
 
-    document.getElementById("memory--settings-grid").value = "5x6";
+    document.getElementById("memory--settings-grid").value = "6x6";
     handleSettingsSubmission();
 })(MemoryGame);

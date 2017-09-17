@@ -1,297 +1,495 @@
 html {
-  width:100%;
-  height:100%;
+    width: 100%;
+    height: 100%;
 }
+
 body {
-  margin:0;
-  padding:0;
-  width:100%;
-  height:100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .modal {
-  position: fixed;
-  height: 90%;
-  right: 0;
-  top: 0;
-  z-index: 3;
-  width: 100%;
-  visibility: hidden;
-  opacity:0;
-  -webkit-transition:opacity 0.4s linear;
-  -moz-transition:opacity 0.4s linear;
-  -ms-transition:opacity 0.4s linear;
-  -o-transition:opacity 0.4s linear;
-  transition:opacity 0.4s linear;
+    position: fixed;
+    height: 90%;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s linear;
+    -moz-transition: opacity 0.4s linear;
+    -ms-transition: opacity 0.4s linear;
+    -o-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
 }
+
 .modal.show {
-  visibility: visible;
-  opacity:1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .valign-table {
-  display: table;
-  table-layout: fixed;
+    display: table;
+    table-layout: fixed;
 }
+
 .valign-cell {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #memory--app-container {
-  background-color: #0061a8;
-  width:100%;
-  height:90%;
+    background-color: #0061a8;
+    width: 100%;
+    height: 90%;
 }
 
 .memory--menu-bar {
-  width:100%;
-  background-color: #222;
-  height:10%;
-  display:table;
+    width: 100%;
+    background-color: #222;
+    height: 10%;
+    display: table;
 }
 
 .memory--menu-bar .inner {
-  display:table-cell;
-  vertical-align:middle;
+    display: table-cell;
+    vertical-align: middle;
 }
+
 .memory--menu-bar .left {
-  text-align: left;
-  float:left;
-  width:50%;
+    text-align: left;
+    float: left;
+    width: 50%;
 }
+
 .memory--menu-bar .right {
-  text-align: right;
-  float:right;
-  width:50%;
+    text-align: right;
+    float: right;
+    width: 50%;
 }
+
 .memory--app-name {
-  color:#ccc;
-  font-size:26px;
-  margin:0;
-  padding:1px 4px;
-  text-transform: uppercase;
-  font-family: "Courier New";
-  letter-spacing: 2px;
+    color: #ccc;
+    font-size: 26px;
+    margin: 0;
+    padding: 1px 4px;
+    text-transform: uppercase;
+    font-family: "Courier New";
+    letter-spacing: 2px;
 }
+
 @media screen and (max-width: 480px) {
-  .memory--app-name {
-    font-size:16px;
-  }
+    .memory--app-name {
+        font-size: 16px;
+    }
 }
 
 #memory--settings-icon {
-  height: 24px;
-  display: block;
-  padding:4px 8px;
-  float: right;
+    height: 24px;
+    display: block;
+    padding: 4px 8px;
+    float: right;
 }
 
 #memory--end-game-modal .wrapper {
-  background-color: rgba(0, 0, 0, .86);
-  text-align: center;
-  color:#ccc;
-  padding:8px 0;
+    background-color: rgba(0, 0, 0, .86);
+    text-align: center;
+    color: #ccc;
+    padding: 8px 0;
 }
+
 #memory--end-game-modal h2,
 #memory--end-game-modal h3 {
-  margin:0;
-  margin-bottom: 4px;
+    margin: 0;
+    margin-bottom: 4px;
 }
 
 #memory--settings-modal {
-  background-color: rgba(0, 0, 0, .86);
-  z-index: 4;
+    background-color: rgba(0, 0, 0, .86);
+    z-index: 4;
 }
+
 #memory--settings-modal form {
-  min-width:240px;
-  width:50%;
-  margin:0 auto;
-  text-align: center;
-  color:#ccc;
+    min-width: 240px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: #ccc;
 }
 
 .memory--settings-label {
-  margin:8px 0;
+    margin: 8px 0;
 }
 
 #memory--settings-grid,
 #memory--settings-reset {
-  width:100%;
-  margin-bottom:16px;
-  font-size:18px;
-  background:transparent;
-  color:#ccc;
-  height:50px;
-  text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 18px;
+    background: transparent;
+    color: #ccc;
+    height: 50px;
+    text-align: center;
 }
 
 #memory--settings-grid option {
-  padding-top:5px;
-  padding-bottom:5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #memory--settings-reset {
-  border-radius:5px;
-  border:2px solid #ccc;
-  cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    cursor: pointer;
 }
 
 #memory--cards {
-  margin:0 auto;
-  padding:0;
-  height:100%;
-  list-style-type: none;
-  list-style-image: none;
-  position:relative;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    list-style-type: none;
+    list-style-image: none;
+    position: relative;
 }
+
 /* entire container, keeps perspective */
 .flip-container {
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  float:left;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    float: left;
 }
 
 /* flip the pane when clicked */
 .flip-container.clicked .front {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
+
 .flip-container.clicked .back {
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
 /* flip speed goes here */
 .flipper {
-  width:90%;
-  height:90%;
-  margin:0% auto;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: relative;
-  top:5%;
-  bottom:5%;
+    width: 90%;
+    height: 90%;
+    margin: 0% auto;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    top: 5%;
+    bottom: 5%;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-  width:100%;
-  height:100%;
-  display: block;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* front pane, placed above back */
 .front {
-  /* for firefox 31 */
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  /*background-color: #e12d00;*/
-  background: linear-gradient(120deg, #FF8626, #E12E00);
+    /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    /*background-color: #e12d00;*/
+    background: linear-gradient(120deg, #FF8626, #E12E00);
 
-  border-radius: 5%;
-  /*background-image: url(../images/card.svg);*/
-  background-position:50% 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-decoration: none;
+    border-radius: 5%;
+    /*background-image: url(../images/card.svg);*/
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-decoration: none;
 }
 
 .front p {
-  color: white;
-  font-size: 10vh;
-  font-family: "Arial";
-  text-align: center;
-  margin: 0;
-  height: 100%;
-  padding: 8%;
+    color: white;
+    font-size: 10vh;
+    font-family: "Arial";
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    padding: 8%;
+}
+
+.back[class$="-desc"],
+.back[class*="-desc "] {
+
+}
+
+.back[class$="-name"],
+.back[class*="-name "] {
+
 }
 
 /* back, initially hidden pane */
 .back {
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-  background-color: #fff;
-  border-radius: 5%;
-  background-position:50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    background-color: #fff;
+    border-radius: 5%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    color: black;
+    font-family: "Arial";
+}
+
+.back p {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 10vh;
 }
 
 .back.card-1 {
-  background-image: url(../images/fruits/apple.jpg);
+    background-image: url(../images/fruits/apple.jpg);
 }
+
 .back.card-2 {
-  background-image: url(../images/fruits/fig.jpg);
+    background-image: url(../images/fruits/fig.jpg);
 }
+
 .back.card-3 {
-  background-image: url(../images/fruits/grape.jpg);
+    background-image: url(../images/fruits/grape.jpg);
 }
+
 .back.card-4 {
-  background-image: url(../images/fruits/kiwi.jpg);
+    background-image: url(../images/fruits/kiwi.jpg);
 }
+
 .back.card-5 {
-  background-image: url(../images/fruits/lemon.jpg);
+    background-image: url(../images/fruits/lemon.jpg);
 }
+
 .back.card-6 {
-  background-image: url(../images/fruits/lime.jpg);
+    background-image: url(../images/fruits/lime.jpg);
 }
+
 .back.card-7 {
-  background-image: url(../images/fruits/mango.jpg);
+    background-image: url(../images/fruits/mango.jpg);
 }
+
 .back.card-8 {
-  background-image: url(../images/fruits/melon.jpg);
+    background-image: url(../images/fruits/melon.jpg);
 }
+
 .back.card-9 {
-  background-image: url(../images/fruits/orange.jpg);
+    background-image: url(../images/fruits/orange.jpg);
 }
+
 .back.card-10 {
-  background-image: url(../images/fruits/peach.jpg);
+    background-image: url(../images/fruits/peach.jpg);
 }
+
 .back.card-11 {
-  background-image: url(../images/fruits/pear.jpg);
+    background-image: url(../images/fruits/pear.jpg);
 }
+
 .back.card-12 {
-  background-image: url(../images/fruits/pinapple.jpg);
+    background-image: url(../images/fruits/pinapple.jpg);
 }
+
 .back.card-13 {
-  background-image: url(../images/fruits/plum.jpg);
+    background-image: url(../images/fruits/plum.jpg);
 }
+
 .back.card-14 {
-  background-image: url(../images/fruits/raspberry.jpg);
+    background-image: url(../images/fruits/raspberry.jpg);
 }
+
 .back.card-15 {
-  background-image: url(../images/fruits/strawberry.jpg);
+    background-image: url(../images/fruits/strawberry.jpg);
+}
+
+
+/**
+    *
+    *   ADOLESCENTRO CARDS
+    *
+ */
+
+
+.back.card-da-hora-name {
+    background-image: url(../images/groups/hora.jpg);
+}
+
+.back.card-da-hora-desc:after {
+    content: "Síndrome de Irlen";
+}
+
+.back.card-interacao-name {
+    background-image: url(../images/groups/autismo.jpg);
+}
+
+.back.card-interacao-desc:after {
+    content: "TEA";
+}
+
+.back.card-tdah-name {
+    background-image: url(../images/groups/tdah.jpg);
+}
+
+.back.card-tdah-desc:after {
+    content: "Paciente com TDAH";
+}
+
+.back.card-criar-name:after {
+    content: "Grupo Criar";
+}
+
+.back.card-criar-desc:after {
+    content: "Retardo Mental";
+}
+
+.back.card-sem-nome-name:after {
+    content: "Grupo sem Nome";
+}
+
+.back.card-sem-nome-desc:after {
+    content: "Automutilação, suicídio e violência";
+}
+
+.back.card-hatha-yoga-name:after {
+    content: "Hatha Yoga";
+}
+
+.back.card-hatha-yoga-desc:after {
+    content: "Prática de Yoga";
+}
+
+.back.card-entrada-name:after {
+    content: "Grupo de Entrada";
+}
+
+.back.card-entrada-desc:after {
+    content: "1º agendamento";
+}
+
+.back.card-diversidade-name:after {
+    content: "Grupo Diversidade";
+}
+
+.back.card-diversidade-desc:after {
+    content: "Identidade de Gênero";
+}
+
+.back.card-pais1-name:after {
+    content: "Grupo Pais1";
+}
+
+.back.card-pais1-desc:after {
+    content: "Inst. (Ana M.; Ângela)";
+}
+
+.back.card-pais2-name:after {
+    content: "Grupo Pais2";
+}
+
+.back.card-pais2-desc:after {
+    content: "Inst. (Ana C.; Adriana)";
+}
+
+.back.card-neuropscicologia-name:after {
+    content: "Avaliação Neuropsicológica";
+}
+
+.back.card-neuropscicologia-desc:after {
+    content: "Avaliação Neuropsicológica";
+}
+
+.back.card-qualidade-de-vida-name:after {
+    content: "Grupo de Nutrição";
+}
+
+.back.card-qualidade-de-vida-desc:after {
+    content: "1º Consulta Nutrição";
+}
+
+.back.card-pav-caliandra-name:after {
+    content: "PAV Caliandra";
+}
+
+.back.card-pav-caliandra-desc:after {
+    content: "Violência Sexual";
+}
+
+.back.card-aprendendo-a-viver-name:after {
+    content: "Aprendendo a Viver";
+}
+
+.back.card-aprendendo-a-viver-desc:after {
+    content: "Adolescentes institucionalizados";
+}
+
+.back.card-gestantes-name:after {
+    content: "Grupo Gestantes";
+}
+
+.back.card-gestantes-desc:after {
+    content: "Adolescentes Gestantes";
+}
+
+.back.card-pos-parto-name:after {
+    content: "Grupo Pós-Parto";
+}
+
+.back.card-pos-parto-desc:after {
+    content: "Puérperas";
+}
+
+.back.card-adolescentes-name:after {
+    content: "Grupo Adolescentes";
+}
+
+.back.card-adolescentes-desc:after {
+    content: "Demandas Pscicológica";
+}
+
+.back.card-maos-que-tecem-name {
+    background-image: url(../images/groups/maos-que-tecem.jpg);
+}
+
+.back.card-maos-que-tecem-desc:after {
+    /*background-image: url(../images/fruits/kiwi.jpg);*/
+    content: "Geração de Renda";
 }
